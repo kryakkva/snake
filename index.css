@@ -12,7 +12,7 @@
   margin-top: 30px;
   margin-left: 50%;
   transform: translate(-50%, 0);
-  background-image: url('/img/nokia-3310.png');
+  background-image: url('img/nokia-3310.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
