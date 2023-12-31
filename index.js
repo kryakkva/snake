@@ -110,7 +110,7 @@ function main() {
   window.addEventListener('keydown', (event) => {
     switch (event.key) {
       case 'p':
-        if (!start) setPause(screen, snake);
+        if (!start && !snake.isDead) setPause(screen, snake);
         if (start) {
           screen.innerHTML = '';
           play(screen, snake);
