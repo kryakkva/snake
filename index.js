@@ -1,20 +1,3 @@
-// const screen = document.querySelector('.screen');
-
-// let x = 0;
-// let y = 0;
-
-// for (let i = 0; i < 352; i += 1) {
-//   const pixel = document.createElement('div');
-//   pixel.className = 'pixel';
-//   if (x === 220) {
-//     x = 0;
-//     y += 10;
-//   }
-//   pixel.style.top = `${y}px`;
-//   pixel.style.left = `${x}px`;
-//   x += 10;
-//   screen.append(pixel);
-// }
 let pause = false;
 
 function createSnake(direction) {
@@ -126,26 +109,24 @@ function main() {
   let start = true;
   window.addEventListener('keydown', (event) => {
     switch (event.key) {
-      case 's':
+      case 'p':
+        if (!start) setPause(screen, snake);
         if (start) {
           screen.innerHTML = '';
           play(screen, snake);
           start = false;
         }
         break;
-      case 'p':
-        if (!start) setPause(screen, snake);
-        break;
-      case 'ArrowUp':
+      case 'w':
         if (!pause && !start) direction = 'up';
         break;
-      case 'ArrowRight':
+      case 'd':
         if (!pause && !start) direction = 'right';
         break;
-      case 'ArrowDown':
+      case 's':
         if (!pause && !start) direction = 'down';
         break;
-      case 'ArrowLeft':
+      case 'a':
         if (!pause && !start) direction = 'left';
         break;
       case 'r':
